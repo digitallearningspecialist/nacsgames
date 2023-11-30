@@ -15,8 +15,8 @@
     <title>NACS Memory Game: Cayuga Live Beta</title>
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <body class="container-fluid col-sm p-0">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">NACS Games</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,43 +24,69 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Seneca</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="seneca-clananimal.html">Seneca Clan Animals</a>
+                <a class="dropdown-item" href="seneca-onecolor.html">Seneca Colors: Singular Animate/Inanimate</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="senecamemory.html">Seneca</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oneida</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="oneidamemory.html">Oneida Clan Animals</a>
+                <a class="dropdown-item" href="#">Oneida Colors: Singular Animate/Inanimate</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="oneidamemory.html">Oneida</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Onondaga</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="onondagamemory.html">Onondaga Clan Animals</a>
+                <a class="dropdown-item" href="#">Onondaga Colors: Singular Animate/Inanimate</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="onondagamemory.html">Onondaga</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mohawk</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="mohawkmemory.html">Mohawk Clan Animals</a>
+                <a class="dropdown-item" href="#">Mohawk Colors: Singular Animate/Inanimate</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mohawkmemory.html">Mohawk</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cayuga</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="cayugamemory.html">Cayuga Clan Animals</a>
+                <a class="dropdown-item" href="#">Cayuga Colors: Singular Animate/Inanimate</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cayugamemory.html">Cayuga</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tuscaroramemory.html">Tuscarora</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tuscarora</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="tuscaroramemory.html">Tuscarora Clan Animals</a>
+                <a class="dropdown-item" href="#">Tuscarora Colors: Singular Animate/Inanimate</a>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <h1 id="gamename">NACS Memory Game: Cayuga (Gayogohó:nǫ?)</h1>
-    <div class="wrapper">
-      <button id="stop" class="hide">Start Over!</button>
-      <div class="stats-container">
-        <div id="moves-count"></div>
-        <div id="time"></div>
-      </div>
-      <div class="game-container"></div>
+    <div>
+      <h1 id="gamename" class="container-fluid">NACS Memory Game: Cayuga (Gayogohó:nǫ?)</h1>
     </div>
-    <div class="controls-container">
-        <p id="result"></p>
-        <button id="start">Start Game!</button>
+    <div class="stats-container container-fluid row">
+      <button id="stop" class="container-fluid-sm col-3">Stop!</button>
+      <button id="start" class="container-fluid-sm col-3">Play!</button>
+      <div id="moves-count" class="container-fluid-sm col-2"></div>
+      <div id="time" class="container-fluid-sm col-2"></div>
+    </div>
+    <div id="gamewrapper" class="wrapper container-fluid hide">
+      <div class="game-container container-fluid"></div>
+    </div>
+    <div class="container-fluid">
+      <p id="result"></p>
     </div>
 
     <script src="cayugascript.js"></script>

@@ -14,22 +14,21 @@ let secondCard = false;
 
 // Items array
 const items = [
-    {name: "bear", clan: "ohkwá:ri", image: "bear.png", audio: "makwa.mp3"},
-    {name: "deer", clan: "ohskennón:ton", image: "deer.png", audio: "waawaashkeshi.mp3"},
-    {name: "wolf", clan: "okwáho", image: "wolf.png", audio: "maiingan.mp3"},
-    {name: "turtle", clan: "a'nó:wara", image: "turtle.png", audio: "mikinaak.mp3"},
-    {name: "beaver", clan: "tsyanì:to", image: "beaver.png", audio: "amik.mp3"},
-    {name: "heron", clan: "ohá:kwaront", image: "heron.png", audio: "aajiijak.mp3"},
-    {name: "sandpiper/snipe", clan: "tawístawis", image: "sandpiper.png", audio: "benaishii.mp3"},
-    {name: "hawk", clan: "karhakón:ha", image: "hawk.png", audio: "memeskniniisi.mp3"},
-    {name: "eel", clan: "tyawerón:ko", image: "eel.png", audio: "giigoonh.mp3"},
+    {name: "bear", clan: "nyagwai'", image: "bear.png", audio: "nyagai.mp3"},
+    {name: "deer", clan: "neogë'", image: "deer.png", audio: "neoge.mp3"},
+    {name: "wolf", clan: "otá:yö:nih", image: "wolf.png", audio: "otayonih.mp3"},
+    {name: "turtle", clan: "ha'no:wa:h", image: "turtle.png", audio: "hanowah.mp3"},
+    {name: "beaver", clan: "nöganya'göh", image: "beaver.png", audio: "noganyagoh.mp3"},
+    {name: "heron", clan: "jóäshä'", image: "heron.png", audio: "joasha.mp3"},
+    {name: "snipe", clan: "nö'dzahgwë'", image: "sandpiper.png", audio: "benaishii.mp3"},
+    {name: "hawk", clan: "gaji'da:s", image: "hawk.png", audio: "gajidas.mp3"},
+    {name: "eel", clan: "goda:nöh", image: "eel.png", audio: "giigoonh.mp3"},
 ];
 
 // Items array
 const wampum = [
     {name: "wampum", image: "wampumsmaller.png"},
 ];
-
 
 // Initial Time
 let seconds = 0,
@@ -53,7 +52,6 @@ const timeGenerator = () => {
 // Initial Moves & Win Count
 let movesCount = 0,
     winCount = 0;
-    
 
 // Calculate moves
 const movesCounter = () => {
@@ -92,17 +90,18 @@ const matrixGenerator = (cardValues, size = 4) => {
             data-card-value is a custom attribute which stores the names of the cards to match later
         */
         gameContainer.innerHTML += `
-        <div class="card-container container-fluid" data-card-value="${cardValues[i].name}" data-audio-value="${cardValues[i].audio}">
-            <div class="card-before container-fluid"><img src="${wampum[0].image}" class="container-fluid"></div>
-            <div class="card card-after text-center container-fluid">
-                <div class"card container-fluid">
-                    <p class="card-title cardtext">${cardValues[i].clan}</p>
-                    <img src="${cardValues[i].image}" class="container-fluid">
-                    <p class="card-title cardtext">${cardValues[i].name}</p>
+            <div class="card-container container-fluid" data-card-value="${cardValues[i].name}" data-audio-value="${cardValues[i].audio}">
+                <div class="card-before container-fluid"><img src="${wampum[0].image}" class="container-fluid"></div>
+                <div class="card card-after text-center container-fluid">
+                    <div class"card container-fluid">
+                        <p class="card-title cardtext">${cardValues[i].clan}</p>
+                        <img src="${cardValues[i].image}" class="container-fluid">
+                        <p class="card-title cardtext">${cardValues[i].name}</p>
+                    </div>
                 </div>
-            </div>
-        </div>`;
+            </div>`;
     }
+
     // Grid
     gameContainer.style.gridTemplateColumns = `repeat(${size}, auto)`;
 
@@ -168,6 +167,7 @@ const matrixGenerator = (cardValues, size = 4) => {
     });
 };
 
+
 // Start game
 startButton.addEventListener("click", () => {
     movesCount = 0;
@@ -175,24 +175,27 @@ startButton.addEventListener("click", () => {
     minutes = 0;
     // Controls and button visibility
     gameWrap.classList.remove("hide");
-    // controls.classList.add("hide");
-    // stopButton.classList.remove("hide");
-    // startButton.classList.add("hide");
+    //stopButton.classList.remove("hide");
+    //playButton.classList.remove("hide");
+    //startButton.classList.add("hide");
     // Start timer
     interval = setInterval(timeGenerator, 1000);
     // initial moves
-    moves.innerHTML = `<span>Moves:</span> ${movesCount}`;
+    moves.innerHTML = `<span>Moves: </span> ${movesCount}`;
     initializer();
 });
 
 // Stop game
 stopButton.addEventListener("click", (stopGame = () => {
-    // controls.classList.remove("hide");
-    // stopButton.classList.add("hide");
+    //controls.classList.remove("hide");
+    // stopButton.classList.add("hide"); 
+    // playButton.classList.remove("hide");
     // startButton.classList.remove("hide");
     clearInterval(interval);
     })
 );
+
+
 
 // Initialize values and function calls
 const initializer = () => {

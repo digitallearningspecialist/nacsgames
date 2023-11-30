@@ -14,15 +14,16 @@ let secondCard = false;
 
 // Items array
 const items = [
-    {name: "bear", clan: "ohkwá:ri", image: "bear.png", audio: "makwa.mp3"},
-    {name: "deer", clan: "ohskennón:ton", image: "deer.png", audio: "waawaashkeshi.mp3"},
-    {name: "wolf", clan: "okwáho", image: "wolf.png", audio: "maiingan.mp3"},
-    {name: "turtle", clan: "a'nó:wara", image: "turtle.png", audio: "mikinaak.mp3"},
-    {name: "beaver", clan: "tsyanì:to", image: "beaver.png", audio: "amik.mp3"},
-    {name: "heron", clan: "ohá:kwaront", image: "heron.png", audio: "aajiijak.mp3"},
-    {name: "sandpiper/snipe", clan: "tawístawis", image: "sandpiper.png", audio: "benaishii.mp3"},
-    {name: "hawk", clan: "karhakón:ha", image: "hawk.png", audio: "memeskniniisi.mp3"},
-    {name: "eel", clan: "tyawerón:ko", image: "eel.png", audio: "giigoonh.mp3"},
+    {name: "it is white", word: "Waabshkaa", image: "whitetshirt.png", audio: "nyagai.mp3"},
+    {name: "it is yellow", word: "Zaawaa", image: "yellowcoat.png", audio: "neoge.mp3"},
+    {name: "it is red", word: "Miskwaa", image: "redball.png", audio: "otayonih.mp3"},
+    {name: "it is black", word: "Mkadewaa", image: "blackbag.png", audio: "hanowah.mp3"},
+    {name: "it is green", word: "Zhaawshkwaa", image: "greenhat.png", audio: "noganyagoh.mp3"},
+    {name: "it is white", word: "Waabshkizi", image: "whiteclock.png", audio: "nyagai.mp3"},
+    {name: "it is yellow", word: "Zaawzi", image: "yellowbird.png", audio: "neoge.mp3"},
+    {name: "it is red", word: "Miskwzi", image: "redapple.png", audio: "otayonih.mp3"},
+    {name: "it is black", word: "Mkadewzi", image: "blackcat.png", audio: "hanowah.mp3"},
+    {name: "it is green", word: "Zhaawshkwzi", image: "greenapple.png", audio: "noganyagoh.mp3"},
 ];
 
 // Items array
@@ -160,7 +161,7 @@ const matrixGenerator = (cardValues, size = 4) => {
                         let delay = setTimeout(() => {
                             tempFirst.classList.remove("flipped");
                             tempSecond.classList.remove("flipped");
-                        }, 1800);
+                        }, 1500);
                     }
                 }
             }
